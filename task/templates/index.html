@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Портфолио разработчика</title>
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+</head>
+<body>
+    <h1>Портфолио разработчика</h1>
+    <div class="container">
+        <div class="header">
+            <div class="title">Название</div>
+            <div class="link">Ссылка на репозиторий</div>
+        </div>
+        {% for portfolio in portfolios %}
+        <div class="row">
+            <div class="title">{{ portfolio.title }}</div>
+            <div class="link"><a href="{{ portfolio.link }}">{{ portfolio.link }}</a></div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="button-container">
+        <form method="post" action="/drop">
+            <input type="submit" value="Сбросить БД" class="reset-button">
+        </form>
+        <a href="/add" class="add-button">Добавить</a>
+    </div>
+</body>
+</html>

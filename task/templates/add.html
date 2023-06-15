@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить портфолио</title>
+    <link rel="stylesheet" type="text/css" href="../static/add.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добавить портфолио</h1>
+        <form method="post" action="/add">
+            <label for="title">Название:</label>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="link">Ссылка на репозиторий:</label>
+            <input type="text" id="link" name="link" required><br>
+
+            <input type="submit" value="Добавить">
+        </form>
+        <a class="back-link" href="/">На главную</a>
+    </div>
+</body>
+</html>
